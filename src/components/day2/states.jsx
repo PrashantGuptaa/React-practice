@@ -5,7 +5,6 @@ const States = () => {
 
   const handleClick = () => {
     setCounter(counter + 1);
-    console.log("Counter:", counter);
   };
 
   return (
@@ -16,4 +15,9 @@ const States = () => {
   );
 };
 
+// export States;
+
+export const mySg = "Hello World";
+
 export default States;
+
