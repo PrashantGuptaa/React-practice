@@ -1,13 +1,12 @@
 import "./App.css";
-import mySg, { States } from "./components/day2/states";
-import StateClass from "./components/day2/stateClass";
+import StylingComponent from "./components/day3/styling";
 
 function App() {
   return (
     <div className="App">
-      {mySg}
-      <States />
-      <StateClass />
+      <StylingComponent />
+      <StylingComponent />
+      <StylingComponent />
     </div>
   );
 }
