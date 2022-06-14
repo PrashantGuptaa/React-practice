@@ -13,5 +13,3 @@ const ConditionalRendering = () => {
 
 export default ConditionalRendering;
 
-
-// arr.length == 0 ? <Loader /> : <Card arr={arr} />

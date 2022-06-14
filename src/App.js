@@ -4,6 +4,7 @@ import CounterComp from "./components/day3/counterComp";
 import ReactProps from "./components/day3/reactProps";
 import { useState } from 'react';
 import ConditionalRendering from "./components/day3/conditionalRendering";
+import EventHandling from "./components/day4/eventHandling";
 
 function App() {
 
@@ -36,27 +37,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* {fruits.map((fruitObj) => (
-        <ReactProps name={fruitObj.name} id = {fruitObj.id}/>
-      ))} */}
-
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          flexWrap: "wrap",
-        }}
-      >
-        {fruits.map((fruitObj) => {
-          const { name, description, season } = fruitObj;
-          return <Card name={name} description={description} season={season} />;
-        })}
-      </div> */}
-      <ConditionalRendering />
-
-      {counters.map((counter, i) => (
-        <CounterComp value={counter} handleClick={handleClick} index={i} />
-      ))}
+    <EventHandling />
     </div>
   );
 }
