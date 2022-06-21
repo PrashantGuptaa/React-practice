@@ -7,7 +7,6 @@ const NavigationBar = () => {
             <Link to='/home'>Home</Link>
             <Link to='/about'>About</Link>
             <a href='/contact-us'>Contact Us</a>
-        
         </div>
      );
 }

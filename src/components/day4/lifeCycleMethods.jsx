@@ -12,7 +12,7 @@ class LifeCycleMethods extends Component {
   componentDidMount() {
     // fetchmydata
     console.log("Component Did Mount");
-    this.id = setInterval(() => console.log("Set Interval"), 2000);
+    // this.id = setInterval(() => console.log("Set Interval"), 2000);
   }
 
   componentDidUpdate() {
