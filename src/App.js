@@ -8,26 +8,37 @@ export const MiddleName = createContext();
 export const CounterContext = createContext();
 
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [name, setName] = useState("");
 
-  const handleIncrement = () => setCounter(counter + 1);
+  console.log(name);
 
-  const obj = {
-    counter,
-    handleIncrement
-  }
+  const getMessage = () => {
+    if (name.length < 8) {
+      return <h3>Password should be greater than 8 letters</h3>;
+    } else if (name.length > 12) {
+      return <h3>Password length should be less than 12 letters</h3>;
+    } else {
+      return <h3>Password is good</h3>;
+    }
+  };
 
   return (
     <div className="App">
-      <FirstName.Provider value={"Prashant"}>
-        <LastName.Provider value={"Gupta"}>
-          <MiddleName.Provider value={"Middle-Name"}>
-            <CounterContext.Provider value={obj}>
-              <CompAContext />
-            </CounterContext.Provider>
-          </MiddleName.Provider>
-        </LastName.Provider>
-      </FirstName.Provider>
+      <div>
+        <label htmlFor="uncontrolled">Uncontrolled Component</label>
+        <input id="uncontrolled" />
+      </div>
+      
+      <div>
+        <label htmlFor="controlled">Controlled Component</label>
+
+        <input
+          id="controlled"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+      {getMessage()}
     </div>
   );
 }
