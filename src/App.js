@@ -1,10 +1,15 @@
 import "./App.css";
-import ComponentPure from "./components/day9/pureComponent";
+import ClickCounter from "./components/day10/clickCounter";
+import MouseOverCounter from "./components/day10/mouseOverCounter";
+import RightClickCounter from "./components/day10/rightClickCounter";
 
 function App() {
+
   return (
     <div className="App">
-      <ComponentPure />
+      <ClickCounter  />
+      <RightClickCounter />
+      <MouseOverCounter />
     </div>
   );
 }
